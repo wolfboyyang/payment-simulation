@@ -89,7 +89,7 @@
                 {stepData.title}
             </h1>
             <div
-                class="w-full h-5/8 portrait:h-3/4 flex flex-col items-center justify-between"
+                class="w-full h-3/4 flex flex-col items-center justify-between"
             >
                 {#if appState.step === 0}
                     <div class="text-left space-y-2">
