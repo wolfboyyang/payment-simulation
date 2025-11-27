@@ -139,7 +139,7 @@
                         </div>
                     {/if}
                     <p
-                        class="text-sm md:text-xl text-gray-600 text-center w-4/5 mx-auto"
+                        class="text-sm md:text-xl text-gray-600 text-center mx-auto"
                     >
                         {stepData.description}
                     </p>
