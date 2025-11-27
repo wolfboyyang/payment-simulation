@@ -28,17 +28,19 @@
 </script>
 
 {#snippet prosConsList(title: string, items: string[], isPros: boolean)}
-    <div class="w-full md:w-1/2 p-2">
-        <h3 class="text-xl font-bold mb-4">
+    <div class="w-full h-full p-2">
+        <h3 class="text-sm md:text-xl font-bold mb-1 md:mb-4">
             {title}
         </h3>
-        <div class="space-y-4">
+        <div class="w-full space-y-1 md:space-y-4">
             {#each items as item}
                 <div
-                    class={`flex items-center justify-between p-2 h-12 rounded-lg shadow-md transition duration-300
+                    class={`w-full flex items-center justify-between p-2 h-12 rounded-lg shadow-md transition duration-300
                 ${isPros ? "bg-[#10b003]" : "bg-[#ff0000]"}`}
                 >
-                    <span class="text-sm font-bold text-white">{item}</span>
+                    <span class="w-full text-xs md:text-sm font-bold text-white"
+                        >{item}</span
+                    >
                     <div class="h-full">
                         {#if isPros}
                             <enhanced:img
@@ -61,7 +63,7 @@
 {/snippet}
 
 <main
-    class="w-screen h-screen portrait:min-h-screen bg-linear-to-b from-blue-700 to-violet-800 flex flex-col justify-center items-center font-sans"
+    class="w-screen h-screen bg-linear-to-b from-blue-700 to-violet-800 flex flex-col justify-center items-center font-sans"
     bind:this={mainElement}
 >
     {#if fullscreenEnabled}
@@ -76,24 +78,30 @@
             {/if}
         </button>
     {/if}
-    <div class="w-4/5 h-4/5">
+    <div class="w-7/8 h-full md:w-4/5 md:h-4/5">
+        <Stepper />
         <div
-            class="w-full h-full bg-[url($lib/assets/card.png)] bg-cover bg-center rounded-2xl flex flex-col items-center p-8"
+            class="w-full h-13/16 portrait:h-7/8 bg-[url($lib/assets/card.png)] bg-cover bg-center rounded-2xl flex flex-col items-center p-4 md:p-8"
         >
-            <Stepper />
             <h1
-                class="p-4 md:p-5 bg-linear-to-r from-blue-700 to-violet-800 text-center rounded-sm text-white font-extrabold text-xl md:text-2xl tracking-wide shadow-lg mb-8"
+                class="p-1 md:p-5 portrait:mt-4 portrait:mb-4 bg-linear-to-r from-blue-700 to-violet-800 text-center rounded-sm text-white font-bold text-sm md:text-2xl tracking-wide shadow-lg mb-2 md:mb-8"
             >
                 {stepData.title}
             </h1>
-            <div class="h-5/8 flex flex-col items-center justify-between">
+            <div
+                class="w-full h-5/8 portrait:h-3/4 flex flex-col items-center justify-between"
+            >
                 {#if appState.step === 0}
                     <div class="text-left space-y-2">
-                        <h2 class="text-lg font-bold">
+                        <h2 class="text-sm md:text-lg font-bold">
                             {stepData.description}
                         </h2>
-                        <h2 class="text-lg font-bold">Vaša naloga je:</h2>
-                        <div class="ml-6 space-y-2 text-gray-700">
+                        <h2 class="text-sm md:text-lg font-bold">
+                            Vaša naloga je:
+                        </h2>
+                        <div
+                            class="portrait:ml-4 md:ml-6 space-y-1 md:space-y-2 text-xs md:text-lg text-gray-700"
+                        >
                             <p>
                                 1. Opazovati simulacijo – spremljajte posnetke
                                 ali animacije pri vsakem načinu plačila.
@@ -111,7 +119,7 @@
                                 z drugimi udeleženci.
                             </p>
                         </div>
-                        <p>
+                        <p class="text-sm md:text-lg">
                             <span class="font-bold"> Cilj: </span>
                             <span>
                                 Spoznati razlike med oblikami denarja, razumeti
@@ -130,13 +138,15 @@
                             />
                         </div>
                     {/if}
-                    <p class="text-gray-600 text-center w-4/5 mx-auto">
+                    <p
+                        class="text-sm md:text-xl text-gray-600 text-center w-4/5 mx-auto"
+                    >
                         {stepData.description}
                     </p>
                 {:else}
-                    <div class="space-y-8">
+                    <div class="w-full h-full space-y-8">
                         <div
-                            class="flex flex-col md:flex-row justify-between gap-6"
+                            class="flex flex-row portrait:flex-col justify-between gap-6"
                         >
                             {#if stepData.pros}
                                 {@render prosConsList(

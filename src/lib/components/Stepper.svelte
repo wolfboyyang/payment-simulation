@@ -4,9 +4,7 @@
     import { appState } from "$lib/app-state.svelte";
 </script>
 
-<div
-    class="relative -top-8 w-full transform -translate-y-1/2 flex items-center justify-center"
->
+<div class="w-full transform translate-y-1/2 flex items-center justify-center">
     <!-- Initial Checkmark for Intro (Step 0) -->
     <div
         class="w-8 h-8 flex items-center justify-center rounded-full font-bold text-sm transition-all duration-300 ease-in-out bg-gray-300 text-black"
