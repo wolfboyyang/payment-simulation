@@ -129,15 +129,17 @@
                         </p>
                     </div>
                 {:else if appState.page === 0}
-                    {#if stepData.image}
-                        <div class="h-3/4">
-                            <img
-                                src={stepData.image}
-                                alt={stepData.title}
-                                class="w-auto h-full"
-                            />
-                        </div>
-                    {/if}
+                    <div class="h-5/8">
+                        {#if stepData.image}
+                            <div class="h-full">
+                                <enhanced:img
+                                    src={stepData.image}
+                                    alt={stepData.title}
+                                    class="h-full"
+                                />
+                            </div>
+                        {/if}
+                    </div>
                     <p
                         class="text-sm md:text-xl text-gray-600 text-center mx-auto"
                     >
