@@ -2,6 +2,7 @@
     import Stepper from "$lib/components/Stepper.svelte";
     import { ArrowRight, Expand, Shrink } from "@lucide/svelte";
     import { AppData, appState, nextStep } from "$lib/app-state.svelte";
+    import Timer from "$lib/components/Timer.svelte";
 
     const stepData = $derived(AppData[appState.step]);
     const isLastStep = $derived(
@@ -84,7 +85,7 @@
             class="w-full h-13/16 portrait:h-7/8 bg-[url($lib/assets/card.png)] bg-cover bg-center rounded-2xl flex flex-col items-center p-4 md:p-8"
         >
             <h1
-                class="p-1 md:p-5 portrait:mt-4 portrait:mb-4 bg-linear-to-r from-blue-700 to-violet-800 text-center rounded-sm text-white font-bold text-sm md:text-2xl tracking-wide shadow-lg mb-2 md:mb-8"
+                class="p-1 md:p-5 portrait:mt-4 portrait:mb-4 bg-linear-to-r from-blue-700 to-violet-800 text-center rounded-sm text-white font-bold text-sm md:text-2xl tracking-wide shadow-lg mb-2 md:mb-4"
             >
                 {stepData.title}
             </h1>
@@ -129,7 +130,29 @@
                         </p>
                     </div>
                 {:else if appState.page === 0}
-                    <div class="h-5/8">
+                    <Timer />
+                    <div class="w-1/2 portrait:w-full h-full p-2">
+                        {#if stepData.video}
+                            <div class="w-full h-full">
+                                <iframe
+                                    class="w-full h-full"
+                                    src={stepData.video}
+                                    title={stepData.title}
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen
+                                ></iframe>
+                            </div>
+                        {/if}
+                    </div>
+                    <p
+                        class="text-sm md:text-xl text-gray-600 text-center mx-auto"
+                    >
+                        {stepData.description}
+                    </p>
+                {:else}
+                    <div class="h-1/5">
                         {#if stepData.image}
                             <div class="h-full">
                                 <enhanced:img
@@ -140,15 +163,9 @@
                             </div>
                         {/if}
                     </div>
-                    <p
-                        class="text-sm md:text-xl text-gray-600 text-center mx-auto"
-                    >
-                        {stepData.description}
-                    </p>
-                {:else}
                     <div class="w-full h-full space-y-8">
                         <div
-                            class="flex flex-row portrait:flex-col justify-between gap-6"
+                            class="flex flex-row portrait:flex-col justify-between gap-6 portrait:gap-2"
                         >
                             {#if stepData.pros}
                                 {@render prosConsList(
