@@ -30,10 +30,10 @@
 
 {#snippet prosConsList(title: string, items: string[], isPros: boolean)}
     <div class="w-full h-full p-2">
-        <h3 class="text-sm md:text-xl font-bold mb-1 md:mb-4">
+        <h3 class="text-sm md:text-xl font-bold mb-1 md:mb-4 portrait:mb-2">
             {title}
         </h3>
-        <div class="w-full space-y-1 md:space-y-4">
+        <div class="w-full space-y-1 md:space-y-4 portrait:space-y-2">
             {#each items as item}
                 <div
                     class={`w-full flex items-center justify-between p-2 h-12 rounded-lg shadow-md transition duration-300
