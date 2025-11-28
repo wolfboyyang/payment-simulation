@@ -30,7 +30,7 @@ export const AppData: Record<
       "Razmislite, kako hitro in preprosto je plačilo z gotovino. Upoštevajte tudi tveganja, kot so kraja ali izguba ter fizične omejitve uporabe.",
     image: "/assets/s1.gif",
     video:
-      "https://www.youtube.com/embed/_sEXDwM2r58?si=9g4CwwB53wXIiUj1&autoplay=1&loop=1&playlist=_sEXDwM2r58",
+      "https://www.youtube.com/embed/_sEXDwM2r58?si=9g4CwwB53wXIiUj1&autoplay=1&loop=1&controls=0&playlist=_sEXDwM2r58",
     pros: [
       "Takojšnje poravnavanje.",
       "Popolna anonimnost.",
@@ -49,7 +49,7 @@ export const AppData: Record<
       "Premislite, kako kartica omogoča varno in sledljivo plačilo. Upoštevajte, kakšna infrastruktura je potrebna in kako provizije ali omejitve lahko vplivajo na transakcijo.",
     image: "/assets/s2.gif",
     video:
-      "https://www.youtube.com/embed/E9die_NZm7g?si=Ktdi69MJF_0ocBz7&autoplay=1&loop=1&&playlist=E9die_NZm7g",
+      "https://www.youtube.com/embed/E9die_NZm7g?si=Ktdi69MJF_0ocBz7&autoplay=1&loop=1&controls=0&&playlist=E9die_NZm7g",
     pros: [
       "Hitro in enostavno.",
       "Sledljivost in varnostni mehanizmi.",
@@ -68,7 +68,7 @@ export const AppData: Record<
       "Razmislite, kako hitro in enostavno je plačilo preko mobilne aplikacije ali QR-kode. Premislite o prednostih, kot so preglednost in integracija s telefonom, ter o omejitvah, kot so internetna povezava in odvisnost od ponudnika.",
     image: "/assets/s3.gif",
     video:
-      "https://www.youtube.com/embed/QljTtmgBKjs?si=ZE5-N6-_vGaf3OAY&autoplay=1&loop=1&playlist=QljTtmgBKjs",
+      "https://www.youtube.com/embed/QljTtmgBKjs?si=ZE5-N6-_vGaf3OAY&autoplay=1&loop=1&controls=0&playlist=QljTtmgBKjs",
     pros: [
       "Zelo hitro, primerno za spletne in fizične nakupe.",
       "Brez fizičnega stika, povezano s telefonom.",
@@ -87,7 +87,7 @@ export const AppData: Record<
       "Premislite, kako plačilo s kriptovaluto poteka neposredno brez banke. Upoštevajte prednosti, kot so decentralizacija in globalna dostopnost, ter tveganja, kot so nihajnost in omejena zaščita potrošnika.",
     image: "/assets/s4.gif",
     video:
-      "https://www.youtube.com/embed/50pTcYGJZ1s?si=5L2olV7ixi1TiM2G&autoplay=1&loop=1&playlist=50pTcYGJZ1s",
+      "https://www.youtube.com/embed/50pTcYGJZ1s?si=5L2olV7ixi1TiM2G&autoplay=1&loop=1&controls=0&playlist=50pTcYGJZ1s",
     pros: [
       "Brez banke ali posrednika (decentralizacija).",
       "Globalna dostopnost in možnost hitrih prenosov.",
