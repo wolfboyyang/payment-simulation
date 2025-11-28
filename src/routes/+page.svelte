@@ -152,9 +152,11 @@
                         {stepData.description}
                     </p>
                 {:else}
-                    <div class="h-1/5">
+                    <div class="w-full h-1/5">
                         {#if stepData.image}
-                            <div class="h-full">
+                            <div
+                                class="w-full h-full flex items-center justify-center"
+                            >
                                 <enhanced:img
                                     src={stepData.image}
                                     alt={stepData.title}
@@ -163,7 +165,7 @@
                             </div>
                         {/if}
                     </div>
-                    <div class="w-full h-full space-y-8">
+                    <div class="w-full h-4/5 space-y-8">
                         <div
                             class="flex flex-row portrait:flex-col justify-between gap-6 portrait:gap-2"
                         >
